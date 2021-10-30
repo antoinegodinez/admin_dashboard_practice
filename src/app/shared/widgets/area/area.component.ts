@@ -22,27 +22,10 @@ export class AreaComponent implements OnInit {
         type: 'area'
       },
       title: {
-        text: 'Historic and Estimated Worldwide Population Growth by Region'
+        text: 'Random DATA'
       },
       subtitle: {
-        text: 'Source: Wikipedia.org'
-      },
-      xAxis: {
-        categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
-        tickmarkPlacement: 'on',
-        title: {
-          enabled: false
-        }
-      },
-      yAxis: {
-        title: {
-          text: 'Billions'
-        },
-        labels: {
-          formatter: function () {
-            return this.value / 1000;
-          }
-        }
+        text: 'Demo'
       },
       tooltip: {
         split: true,
