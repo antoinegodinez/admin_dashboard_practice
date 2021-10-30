@@ -9,13 +9,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardService } from 'src/app/modules/dashboard.service';
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,
@@ -25,8 +26,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDividerModule,
     FlexLayoutModule,
     MatCardModule
-  ]
+  ],
+  providers: [
+    DashboardService
+  ],
 })
 export class DefaultModule { }
+
+
 
 // (toggleSideBarForMe)="sideBarToggler($event)" //
