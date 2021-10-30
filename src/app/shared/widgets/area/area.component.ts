@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import HC_exporting from 'highcharts/modules/exporting';
 
 @Component({
   selector: 'app-widget-area',
@@ -31,16 +32,11 @@ export class AreaComponent implements OnInit {
         split: true,
         valueSuffix: ' millions'
       },
-      plotOptions: {
-        area: {
-          stacking: 'normal',
-          lineColor: '#666666',
-          lineWidth: 1,
-          marker: {
-            lineWidth: 1,
-            lineColor: '#666666'
-          }
-        }
+      credits: {
+        enabled: false,
+      },
+      exporting: {
+        enabled: true,
       },
       series: [{
         name: 'Asia',
@@ -59,6 +55,14 @@ export class AreaComponent implements OnInit {
         data: [2, 2, 2, 6, 13, 30, 46]
       }]
     };
+
+    HC_exporting(Highcharts);
+
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      );
+    },300);
   }
 
 }
