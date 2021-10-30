@@ -10,11 +10,13 @@ export class AreaComponent implements OnInit {
 
   chartOptions: {};
 
-  HighCharts = Highcharts;
+  Highcharts = Highcharts;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+
     this.chartOptions = {
       chart: {
         type: 'area'
@@ -36,17 +38,11 @@ export class AreaComponent implements OnInit {
         title: {
           text: 'Billions'
         },
-        _labels: {
+        labels: {
           formatter: function () {
             return this.value / 1000;
           }
-        },
-        get labels() {
-          return this._labels;
-        },
-        set labels(value) {
-          this._labels = value;
-        },
+        }
       },
       tooltip: {
         split: true,
