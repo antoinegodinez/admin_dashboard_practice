@@ -31,11 +31,6 @@ export class PieComponent implements OnInit {
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
       },
-      accessibility: {
-        point: {
-          valueSuffix: '%'
-        }
-      },
       plotOptions: {
         pie: {
           allowPointSelect: true,
